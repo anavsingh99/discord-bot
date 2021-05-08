@@ -42,9 +42,5 @@ class Fun(commands.Cog):
     async def marco(self, ctx):
         await ctx.send(f'Polo!')
 
-    @commands.command()
-    async def latency(self, ctx):
-        await ctx.send(round(client.latency * 1000))
-
 def setup(client):
     client.add_cog(Fun(client))

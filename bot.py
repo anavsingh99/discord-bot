@@ -3,13 +3,14 @@ from dotenv import load_dotenv
 import os
 from discord.ext import commands
 import random
-import requests
-import json
 
-client = commands.Bot(command_prefix='.')  # create an instance of a bot, decorater, event
+help_command = commands.DefaultHelpCommand(no_category = 'General')
+
+client = commands.Bot(command_prefix='.',
+        help_command = help_command) 
 
 @client.event
-async def on_ready(): # when the bot is ready - ready state, know that things are working
+async def on_ready():
     print('Bot is ready.')
 
 @client.command()
@@ -31,22 +32,11 @@ for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
         client.load_extension(f'cogs.{filename[:-3]}')
 
+@client.command()
+async def latency(self, ctx):
+    await ctx.send(round(client.latency * 1000))
+
 # Credentials
 load_dotenv('.env')
-api_token = os.getenv('API_TOKEN')
 
-@client.command(aliases=['timeinAmerica'])
-async def timezone(ctx, *, city):
-    response = requests.get("http://api.timezonedb.com/v2.1/get-time-zone?key=" + api_token + "&format=json&by=zone&zone=America/" + city)
-    response_json = response.json()
-    output = response_json['formatted']
-    await ctx.send(f'The local time in {city} is: {output}')
-
-@client.command(aliases=['timeinAsia'])
-async def timezone2(ctx, *, city):
-    response = requests.get("http://api.timezonedb.com/v2.1/get-time-zone?key=" + api_token + "&format=json&by=zone&zone=Asia/" + city)
-    response_json = response.json()
-    output = response_json['formatted']
-    await ctx.send(f'The local time in {city} is: {output}')
-
-client.run(os.getenv('DISCORD_TOKEN'))  # webhook, running the bot using token
+client.run(os.getenv('DISCORD_TOKEN')) 
