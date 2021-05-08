@@ -33,8 +33,8 @@ for filename in os.listdir('./cogs'):
         client.load_extension(f'cogs.{filename[:-3]}')
 
 @client.command()
-async def latency(self, ctx):
-    await ctx.send(round(client.latency * 1000))
+async def latency(ctx):
+    await ctx.send(f'{round(client.latency * 1000)} ms')
 
 # Credentials
 load_dotenv('.env')
