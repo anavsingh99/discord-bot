@@ -36,6 +36,20 @@ for filename in os.listdir('./cogs'):
 async def latency(ctx):
     await ctx.send(f'{round(client.latency * 1000)} ms')
 
+@client.command()
+async def clear(ctx, amount : int):
+    await ctx.channel.purge(limit = (amount + 1))
+
+@client.event
+async def on_command_error(ctx, error):
+    if isinstance(error, commands.CommandNotFound):
+        await ctx.send('Invalid command.')
+
+@clear.error
+async def clear_error(ctx, error):
+    if isinstance(error, commands.MissingRequiredArgument):
+        await ctx.send('Please specify the amount of messages to delete.')
+
 # Credentials
 load_dotenv('.env')
 

@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+import random
 
 class Fun(commands.Cog):
 
@@ -10,6 +11,19 @@ class Fun(commands.Cog):
     @commands.Cog.listener()
     async def on_ready(self):
         print('Fun Bot is online.')
+
+    @commands.command()
+    async def compliment(self, ctx):
+        compliments = [ "You look great today!" ,
+                        "You have really really nice programming skills." ,
+                        "You make an excellent human.",
+                        "You’re a true gift to the people in your life.",
+                        "You’re amazing!",
+                        "You have a remarkable sense of humor.",
+                        "You are one of a kind.",
+                        "You inspire me to be a better Bot.",
+                        "Simply knowing you has made me a better Bot."]
+        await ctx.send(random.choice(compliments))
     
     @commands.command(aliases=['8ball'])
     async def _8ball(self, ctx, *, question):

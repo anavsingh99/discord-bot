@@ -32,5 +32,10 @@ class Math(commands.Cog):
         div = num1/num2
         await ctx.send(div)
 
+    @commands.command()
+    async def raisedto(self, ctx, num1: float, num2:float):
+        power = num1**num2
+        await ctx.send(power)
+
 def setup(client):
     client.add_cog(Math(client))
