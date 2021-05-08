@@ -20,7 +20,7 @@ class Fun(commands.Cog):
                     'You may rely on it.',
                     'As I see it, yes.',
                     'Most likely.',
-                    'Outlook good.',
+                    'Ummm I guess...',
                     'Signs point to yes.',
                     'Reply hazy, try again.',
                     'Ask again later.',
