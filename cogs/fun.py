@@ -22,11 +22,12 @@ class Fun(commands.Cog):
                         "You have a remarkable sense of humor.",
                         "You are one of a kind.",
                         "You inspire me to be a better Bot.",
-                        "Simply knowing you has made me a better Bot."]
+                        "Simply knowing you has made me a better Bot."
+                        "All my Bot friends think you're really cool!"]
         await ctx.send(random.choice(compliments))
     
     @commands.command(aliases=['8ball'])
-    async def _8ball(self, ctx, *, question):
+    async def _8ball(self, ctx, *, question: str):
         responses = ['It is Certain.', 
                     'It is decidedly so',
                     'Without a doubt.',

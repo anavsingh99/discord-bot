@@ -49,6 +49,10 @@ async def on_command_error(ctx, error):
 async def clear_error(ctx, error):
     if isinstance(error, commands.MissingRequiredArgument):
         await ctx.send('Please specify the amount of messages to delete.')
+    elif isinstance(error, commands.BadArgument):
+        await ctx.send("Enter a valid number.")
+    else:
+        await ctx.send("There was an error.")
 
 # Credentials
 load_dotenv('.env')
