@@ -1,15 +1,15 @@
-# Nice Guy Bot
+# Bikini Bot-tom
 
-Nice Guy Bot is a helpful bot that takes in multiple commands which are divided into various categories using cogs. 
+Bikini Bot-tom is a helpful Discord bot that takes in multiple commands which are divided into various categories using cogs. It's name comes from the iconic show "SpongeBob SquarePants" and is a reference to the city where all the characters lived!
 
-Use .help to see the full range of Nice Guy Bot's commands!
+Use .help to see the full range of Bikini Bot-tom's commands!
 
 ## Setup
 ```bash
 pip install discord.py
 pip install python-dotenv
 ```
-Add DISCORD_TOKEN and API_TOKEN to your .env file in the folder. The tokens should be sent to you on Discord by Anav or Darsh.
+Add DISCORD_TOKEN and API_TOKEN to your .env file in the folder. The tokens should be sent to you on Discord by the creators of Bikini Bot-tom.
 
 ## General
 
