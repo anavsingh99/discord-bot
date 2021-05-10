@@ -7,18 +7,10 @@ import random
 help_command = commands.DefaultHelpCommand(no_category = 'General')
 
 client = commands.Bot(command_prefix='!', help_command=help_command)
-# client.remove_command("help")
 
 @client.event
 async def on_ready():
     print('Bot is ready.')
-
-# @client.group(invoke_without_command=True)
-# async def help(ctx):
-#     em = discord.Embed(title="Help", description = "help")
-
-#     em.add_field(name = "UStime", value = "kick, ban, warn")
-#     await ctx.send(embed = em)
 
 @client.command(help="loads cogs by name")
 async def load(ctx, extension):
