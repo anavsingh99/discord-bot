@@ -4,7 +4,7 @@ DS3002 Final Project: Anav Singh (as9dw) and Darsh Patel (dp2bkq)
 
 Bikini Bot-tom is a helpful Discord bot that takes in multiple commands which are divided into various categories using cogs. It's name comes from the iconic show "SpongeBob SquarePants" and is a reference to the city where all the characters lived!
 
-Use .help to see the full range of Bikini Bot-tom's commands!
+Use .help to see the full range of Bikini Bot-tom's commands.
 
 ## Setup
 ```bash
