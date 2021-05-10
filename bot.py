@@ -6,22 +6,29 @@ import random
 
 help_command = commands.DefaultHelpCommand(no_category = 'General')
 
-client = commands.Bot(command_prefix='.',
-        help_command = help_command) 
+client = commands.Bot(command_prefix='!', help_command=help_command)
+# client.remove_command("help")
 
 @client.event
 async def on_ready():
     print('Bot is ready.')
 
-@client.command()
+# @client.group(invoke_without_command=True)
+# async def help(ctx):
+#     em = discord.Embed(title="Help", description = "help")
+
+#     em.add_field(name = "UStime", value = "kick, ban, warn")
+#     await ctx.send(embed = em)
+
+@client.command(help="loads cogs by name")
 async def load(ctx, extension):
     await ctx.send(f'Loading cogs.{extension}...')
     client.load_extension(f'cogs.{extension}')
-@client.command()
+@client.command(help="unloads cogs by name")
 async def unload(ctx, extension):
     await ctx.send(f'Unloading cogs.{extension}...')
     client.unload_extension(f'cogs.{extension}')
-@client.command()
+@client.command(help="unloads and reloads cogs by name")
 async def reload(ctx, extension):
     await ctx.send(f'Unloading cogs.{extension}...')
     client.unload_extension(f'cogs.{extension}')
@@ -32,11 +39,11 @@ for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
         client.load_extension(f'cogs.{filename[:-3]}')
 
-@client.command()
+@client.command(help="sends current latency")
 async def latency(ctx):
     await ctx.send(f'{round(client.latency * 1000)} ms')
 
-@client.command()
+@client.command(help="clears last x amount of messages")
 async def clear(ctx, amount : int):
     await ctx.channel.purge(limit = (amount + 1))
 

@@ -12,7 +12,7 @@ class Fun(commands.Cog):
     async def on_ready(self):
         print('Fun Bot is online.')
 
-    @commands.command()
+    @commands.command(help="gives a nice compliment!")
     async def compliment(self, ctx):
         compliments = [ "You look great today!" ,
                         "You have really really nice programming skills." ,
@@ -26,7 +26,7 @@ class Fun(commands.Cog):
                         "All my Bot friends think you're really cool!"]
         await ctx.send(random.choice(compliments))
     
-    @commands.command(aliases=['8ball'])
+    @commands.command(aliases=['8ball'], help="gives an 8-ball style answer to any question")
     async def _8ball(self, ctx, *, question: str):
         responses = ['It is Certain.', 
                     'It is decidedly so',
@@ -49,11 +49,11 @@ class Fun(commands.Cog):
                     'Very doubtful.']
         await ctx.send(f'Question: {question}\nAnswer: {random.choice(responses)}')
     
-    @commands.command()
+    @commands.command(help="replies with Pong!")
     async def ping(self, ctx):
         await ctx.send(f'Pong!')
 
-    @commands.command()
+    @commands.command(help="replies with Polo!")
     async def marco(self, ctx):
         await ctx.send(f'Polo!')
 
