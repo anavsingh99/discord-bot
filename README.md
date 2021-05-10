@@ -9,6 +9,7 @@ Use .help to see the full range of Nice Guy Bot's commands!
 pip install discord.py
 pip install python-dotenv
 ```
+Add DISCORD_TOKEN and API_TOKEN to your .env. The tokens should be sent to you on Discord by Anav or Darsh.
 
 ## General
 
