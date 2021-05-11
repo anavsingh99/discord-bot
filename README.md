@@ -35,3 +35,8 @@ The fun commands category has various commands to make you smile :)
 2) .compliment - gives you a compliment
 3) .marco - replies with Polo!
 4) .ping - replies with Pong!
+
+## Time
+These commands will give the local time in certain cities based on location.
+1) .Asiatime - gives the time in Asia for the cities listed under .help Asiatime
+2) .UStime - gives the time in the US for the cities listed under .help UStime
