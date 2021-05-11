@@ -42,4 +42,4 @@ These commands will give the local time in certain cities based on location.
 2) !UStime - gives the time in the US for the cities listed under .help UStime
 
 ## Problems
-One problem we faced was finding what cities are accepted by the API (we had to dig a little on their website). Another problem we faced was figuring out how to include the help information for each function when .help was called. Using and configuring cogs took some time as well. 
+One problem we faced was finding what cities are accepted by the API (we had to dig a little on their website). Another problem we faced was figuring out how to include the help information for each function when .help was called. Using and configuring cogs took some time as well but finally they helped us segment the commands. 
