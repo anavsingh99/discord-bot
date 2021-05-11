@@ -17,7 +17,7 @@ Add DISCORD_TOKEN and API_TOKEN to your .env file in the folder. The tokens shou
 
 1) !clear - takes in one argument (int) and clears that many messages from the chat
 2) !latency - gives the current latency
-3) !load, .unload - enabling/disabling cogs
+3) !load, !unload - enabling/disabling cogs
 4) !reload - implementing changes made to a cog
 
 ## Math
