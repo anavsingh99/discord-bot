@@ -40,3 +40,6 @@ The fun commands category has various commands to make you smile :)
 These commands will give the local time in certain cities based on location.
 1) .Asiatime - gives the time in Asia for the cities listed under .help Asiatime
 2) .UStime - gives the time in the US for the cities listed under .help UStime
+
+## Problems
+One problem we faced was finding what cities are accepted by the API (we had to dig a little on their website). Another problem we faced was figuring out how to include the help information for each function when .help was called. Using and configuring cogs took some time as well. 
