@@ -11,7 +11,7 @@ Use !help to see the full range of Bikini Bot-tom's commands.
 pip install discord.py
 pip install python-dotenv
 ```
-Add DISCORD_TOKEN and API_TOKEN to your .env file in the folder. The tokens should be sent to you on Discord by the creators of Bikini Bot-tom.
+Add DISCORD_TOKEN and API_TOKEN to your .env file in the folder. The tokens should be sent to you by the creators of Bikini Bot-tom.
 
 ## General
 
